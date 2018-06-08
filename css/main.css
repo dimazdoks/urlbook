@@ -67,7 +67,7 @@ a:hover {
 	color: rgba(255, 255, 255, 0.8);
 	text-decoration: none;
 }
-
+ul.nav {padding-right: 0;}
 ul.nav li {
 	margin-right: 15px;
 }
@@ -134,6 +134,74 @@ main {
 	padding-bottom: 70px;
 }
 
+@media (max-width: 1140px) {
+	.entry {width: 46%;}
+}
+
+@media (max-width: 1040px) and (min-width: 850px) {
+	.entry .pre-nav {padding: 0 20px;}
+
+	ul.nav.justify-content-between label.radio li {padding: 5px 10px;}
+}
+@media (max-width: 850px) {
+	.entry {width: 80%;}
+	main>div>div.row.justify-content-between {
+	    -webkit-box-pack: justify!important;
+   	 	-ms-flex-pack: justify!important;
+    	justify-content: center!important;
+	}
+
+	.between-comments {
+		position: absolute;
+		margin-top: -40px;
+	}
+}
+
+@media (max-width: 750px) {
+	ul.categories label.radio { 
+		width: 50%;
+		display: block;
+		margin: 5px;
+		text-align: center;
+		font-size: .95em;
+	}
+}
+@media (max-width: 590px) {
+	.entry {width: 95%;}
+	* {font-size: .98em;}
+	.entry .comment { padding: 10px 30px 10px 50px;}
+	.entry .comment-avatar {
+		width: 25px;
+		height: 25px;
+		left: 15px;
+		top: 15px;
+	}
+
+	.entry div.yellow,
+	.entry div.green {
+		padding: 1px 4px;
+	}
+	.entry .comment .right-arrow {top: 18px;}
+
+	ul.categories label.radio { width: 60%;	}
+}
+
+@media (max-width: 460px) {
+	.entry * {font-size: .9em;}
+	.entry .pre-nav {padding: 0 20px;}
+	.entry {width: 98%;}
+
+	.entry div.yellow,
+	.entry div.green {
+		right: 30px;
+	}
+	.entry .comment .right-arrow {right: 14px;}
+	ul.nav.justify-content-between label.radio li {padding: 5px 10px;}
+
+
+	ul.categories label.radio { width: 80%;	}
+}
+
 [type="radio"] {
 	display: none;
 }
@@ -142,7 +210,7 @@ label.radio {
 	cursor: pointer;
 }
 label.radio li {
-	padding: 5px 25px;
+	padding: 5px 20px;
 	margin-right: 0;
 	opacity: .7;
 }
@@ -161,7 +229,7 @@ label.radio:hover li {
 .between-comments {
 	padding-top: 15px;
 	display: inline-block;
-	width: calc(100% - 1060px);
+	width: 40px;
 	opacity: .7;
 }
 .between-comments:before {
@@ -190,7 +258,10 @@ label.radio:hover li {
 	padding: 30px 80px 30px 90px;
 	border-bottom: 1px solid #eaf1f5;
 	margin: 0;
+	cursor: pointer;
+	color: #000;
 }
+
 .comment:hover {
 	background-color: #eaf1f5;
 }
@@ -213,7 +284,7 @@ div.green {
 	display: inline-block;
 	border-radius: 12px;
 	position: absolute;
-	right: 90px;
+	right: 60px;
 	text-align: center;
 	min-width: 70px;
 }
@@ -251,6 +322,7 @@ div.green {
 	margin: 0;
 	display: inline-block;
 	width: calc(100% - 90px);
+	color: #000;
 }
 
 .text a {
@@ -270,10 +342,11 @@ div.green {
 
 .comment .right-arrow {
 	position: absolute;
-	right: 40px;
+	right: 30px;
 	top: 40px;
 	opacity: .7;
 	cursor: pointer;
+	color: #000;
 }
 
 /* s c r o l l */
@@ -301,7 +374,8 @@ div.green {
 .pre-nav {
 	background-color: #fff;
 	top: 0;
-	width: 530px;
+	/*width: 530px;*/
+	width: 100%;
 	padding: 0 50px;
 	border-bottom: 1px solid rgba(0,0,0,.1);
 }
@@ -309,6 +383,7 @@ div.green {
 	height: 60px;
 	line-height: 60px;
 	color: #3c7ba2;
+	margin-right: 0;
 }
 
 .pre-nav ul li:hover {
