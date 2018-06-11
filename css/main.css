@@ -268,8 +268,8 @@ main {
 	}
 	#for-language:checked ~ #language {
 		height: 108px;
-		top: 134px;
-		left: 20px;
+		top: 138px;
+		left: 12px;
 	}
 
 	#for-language:checked ~ #language * { color: #000; }
@@ -277,8 +277,8 @@ main {
 		display: block;
 		cursor: pointer;
 		color: #fff;
-		height: 96px;
-		line-height: 96px;
+		height: 98px;
+		line-height: 98px;
 		padding-right: 18px;
 		padding-left: 18px;
 		margin-bottom: 0;
