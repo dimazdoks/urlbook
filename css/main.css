@@ -257,23 +257,40 @@ main {
 		position: absolute;
 		margin-top: -40px;
 	}
+
+	.blocks,
+	.blocks>row {padding: 0;}
 }
 
-@media (max-width: 750px) {
+@media (max-width: 780px) {
 	ul.categories label.radio,
 	ul.subcat label.sub-radio { 
-		width: 50%;
+		width: 51%;
 		display: block;
-		margin: 5px;
+		margin: 0px;
 		text-align: center;
 		font-size: .95em;
 	}
+	ul.subcat label.sub-radio {margin: 5px;}
 
 	ul.subcat li.line { display: none; }
+
+	.blocks>.row {	    
+		-webkit-box-pack: justify!important;
+   	 	-ms-flex-pack: justify!important;
+    	justify-content: center!important;
+    }
 }
 @media (max-width: 590px) {
 	#comments:checked ~ .row .entry {width: 95%;}
-	* {font-size: .98em;}
+	* {	font-size: .98em;}
+	
+	ul.nav li {line-height: 30px;}
+	.pre-nav ul.nav li {
+		line-height: 45px;
+		height: 45px;
+	}
+
 	.entry .comment { padding: 10px 30px 10px 50px;}
 	.entry .comment-avatar {
 		width: 25px;
@@ -288,7 +305,8 @@ main {
 	}
 	.entry .comment .right-arrow {top: 18px;}
 
-	ul.categories label.radio { width: 60%;	}
+	ul.categories label.radio,
+	ul.subcat label.sub-radio { width: 60%;	}
 }
 
 @media (max-width: 460px) {
@@ -304,7 +322,8 @@ main {
 	ul.nav.justify-content-between label.radio li {padding: 5px 10px;}
 
 
-	ul.categories label.radio { width: 80%;	}
+	ul.categories label.radio,
+	ul.subcat label.sub-radio { width: 80%;	}
 }
 
 [type="radio"] {
@@ -346,6 +365,7 @@ label.radio:hover li {
 	padding: 15px;
 	display: inline-block;
 	width: 40px;
+	max-height: 50px;
 	opacity: .7;
 	margin-bottom: 0;
 }
@@ -643,10 +663,16 @@ label.display {
 	padding-bottom: 20px;
 }
 
+.blocks.container { max-width: 100%; }
+
 .block {
 	display: inline-block;
 	width: 350px;
 	padding: 26px;
+
+	margin-left: 8px;
+	margin-right: 8px;
+	
 	background-color: #fff;
 	border: 1px solid rgba(0,0,0,.1);
 	border-radius: 10px;
