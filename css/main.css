@@ -198,8 +198,7 @@ li#for-notice:hover ~ #notice {
 	border: 2px solid #3d87b4;
 }
 
-.avatar:after {
-	content: "2";
+.avatar>span {
 	text-align: center;
 	line-height: 27px;
 	position: absolute;
@@ -255,7 +254,7 @@ main {
 		width: 50px;
 		height: 50px;
 	}
-	#mobile-menu:checked ~ .right .avatar:after {
+	#mobile-menu:checked ~ .right .avatar>span {
 		width: 24px;
 		height: 24px;
 		line-height: 22px;
@@ -673,6 +672,14 @@ ul.display {
 	width: 50px;
 }
 
+@media (max-width: 800px) {
+	ul.display { position: absolute; }
+	ul.display ~ p {
+		margin-left: 70px;
+		margin-bottom: 20px;
+	}
+}
+
 ul.display li {
 	display: block;
 	width: 50px;
@@ -705,6 +712,7 @@ label.display {
 .left-describe,
 .right-describe {
 	display: inline-block;
+	vertical-align: middle;
 }
 .right-describe {
 	padding-left: 12px;
